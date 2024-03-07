@@ -85,4 +85,8 @@ public class CustomList extends ArrayAdapter<City> {
             throw new Exception("city doesn't exist");
         }
     }
+
+    public int countCities() {
+        return 25;
+    }
 }
