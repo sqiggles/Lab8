@@ -76,4 +76,7 @@ public class CustomList extends ArrayAdapter<City> {
         }
         return Boolean.FALSE;
     }
+
+    public void delete(City city) {
+    }
 }

@@ -50,4 +50,15 @@ public class CustomListTest {
         assertTrue(!CustomList.hasCity(city));
     }
 
+    @Test
+    void testDelete() throws Exception {
+        CustomList CustomList = mockCustomList();
+        City city = new City("Charlottetown", "Prince Edward Island");
+        CustomList.add(city);
+        assertEquals(0, city.compareTo(CustomList.getCities().get(0)));
+        assertEquals(0, mockCity().compareTo(CustomList.getCities().get(1)));
+        CustomList.delete(city);
+        assertEquals(0, mockCity().compareTo(CustomList.getCities().get(0)));
+    }
+
 }
