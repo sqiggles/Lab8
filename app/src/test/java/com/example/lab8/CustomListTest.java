@@ -40,4 +40,14 @@ public class CustomListTest {
         assertEquals(0, city.compareTo(CustomList.getCities().get(0)));
         assertEquals(0, mockCity().compareTo(CustomList.getCities().get(1)));
     }
+
+    @Test
+    void testHasCity() {
+        CustomList CustomList = mockCustomList();
+        City city2 = new City("Edmonton", "Alberta");
+        assertTrue(CustomList.hasCity(city2));
+        City city = new City("Charlottetown", "Prince Edward Island");
+        assertTrue(!CustomList.hasCity(city));
+    }
+
 }
