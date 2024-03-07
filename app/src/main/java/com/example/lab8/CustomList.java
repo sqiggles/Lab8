@@ -31,6 +31,12 @@ public class CustomList extends ArrayAdapter<City> {
         return list;
 
     }
+    public void add(City city) {
+        if (cities.contains(city)) {
+            throw new IllegalArgumentException();
+        }
+        cities.add(city);
+    }
 
     @NonNull
     @Override
