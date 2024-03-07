@@ -77,6 +77,12 @@ public class CustomList extends ArrayAdapter<City> {
         return Boolean.FALSE;
     }
 
-    public void delete(City city) {
+    public void delete(City city) throws Exception {
+        if (hasCity(city)){
+            this.cities.remove(city);
+        }
+        else {
+            throw new Exception("city doesn't exist");
+        }
     }
 }
